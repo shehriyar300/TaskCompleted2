@@ -83,11 +83,11 @@ export default function AddTask() {
             onChange={handleChange}
             required
           >
-            <option value="">-- Çətinlik seçin --</option>
-            <option value="Yüngül">Yüngül</option>
-            <option value="Orta">Orta</option>
-            <option value="Biraz çətin">Biraz çətin</option>
-            <option value="Çətin">Çətin</option>
+            <option value="all">All</option>
+          <option value="Yüngül">Easy</option>
+          <option value="Orta">Medium</option>
+          <option value="Biraz çətin">Hard</option>
+          <option value="Çətin">Very hard</option>
           </select>
           <label>Task Detail:</label>
           <input

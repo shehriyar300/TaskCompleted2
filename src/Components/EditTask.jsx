@@ -91,10 +91,11 @@ export default function EditTask() {
               onChange={handleChange}
               required
             >
-              <option value="Yüngül">Yüngül</option>
-              <option value="Orta">Orta</option>
-              <option value="Biraz çətin">Biraz çətin</option>
-              <option value="Çətin">Çətin</option>
+              <option value="all">All</option>
+          <option value="Yüngül">Easy</option>
+          <option value="Orta">Medium</option>
+          <option value="Biraz çətin">Hard</option>
+          <option value="Çətin">Very hard</option>
             </select>
 
             <label>Status:</label>
@@ -104,8 +105,8 @@ export default function EditTask() {
               onChange={handleChange}
               required
             >
-              <option value="false">Tamamlanmayıb</option>
-              <option value="true">Tamamlanıb</option>
+              <option value="false">Incompleted</option>
+              <option value="true">Completed</option>
             </select>
           </div>
 

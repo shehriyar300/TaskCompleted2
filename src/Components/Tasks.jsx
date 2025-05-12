@@ -51,7 +51,7 @@ export default function Home() {
       <div className="filtr">
         <input
           type="text"
-          placeholder="Ada görə axtar..."
+          placeholder="Search..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
@@ -61,24 +61,24 @@ export default function Home() {
           onChange={(e) => setDifficultyFilter(e.target.value)}
           value={difficultyFilter}
         >
-          <option value="all">Bütün çətinliklər</option>
-          <option value="Yüngül">Yüngül</option>
-          <option value="Orta">Orta</option>
-          <option value="Biraz çətin">Biraz çətin</option>
-          <option value="Çətin">Çətin</option>
+          <option value="all">All</option>
+          <option value="Yüngül">Easy</option>
+          <option value="Orta">Medium</option>
+          <option value="Biraz_çətin">Hard</option>
+          <option value="Çətin">Very hard</option>
         </select>
         <select
           onChange={(e) => setStatusFilter(e.target.value)}
           value={statusFilter}
         >
-          <option value="all">Hamısı</option>
-          <option value="completed">Tamamlananlar</option>
-          <option value="incomplete">Tamamlanmayanlar</option>
+          <option value="all">All</option>
+          <option value="completed">Completed</option>
+          <option value="incomplete">Incomplete</option>
         </select>
       </div>
 
       {filteredTasks.length === 0 ? (
-        <p>Heç bir tapşırıq tapılmadı.</p>
+        <p>Not Found</p>
       ) : (
         <ul className="task-list">
           {filteredTasks.map((task) => (
@@ -88,10 +88,10 @@ export default function Home() {
             >
               <strong>{task.name}</strong> - <p>{task.taskDetail}</p>
               <br />
-              Çətinlik: {task.difficulty || "Yoxdur"}
+              Difficulty: {task.difficulty || "Yoxdur"}
               <br />
               <span>
-                Status: {task.completed ? "Tamamlandı" : "Tamamlanmayıb"}
+                Status: {task.completed ? "Completed" : "Incomplete"}
               </span>
               <div className="button-group">
                 <button className="btn" onClick={() => handleEdit(task.id)}>
@@ -101,7 +101,7 @@ export default function Home() {
                   Delete
                 </button>
                 <button className="btn" onClick={() => handleComplete(task.id)}>
-                  {task.completed ? "Geri al" : "Tamamla"}
+                  {task.completed ? "Undo" : "Complete"}
                 </button>
               </div>
             </li>
