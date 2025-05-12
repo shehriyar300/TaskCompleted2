@@ -62,10 +62,10 @@ export default function Home() {
           value={difficultyFilter}
         >
           <option value="all">All</option>
-          <option value="Yüngül">Easy</option>
-          <option value="Orta">Medium</option>
-          <option value="Biraz_çətin">Hard</option>
-          <option value="Çətin">Very hard</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+          <option value="Very hard">Very hard</option>
         </select>
         <select
           onChange={(e) => setStatusFilter(e.target.value)}
@@ -88,7 +88,7 @@ export default function Home() {
             >
               <strong>{task.name}</strong> - <p>{task.taskDetail}</p>
               <br />
-              Difficulty: {task.difficulty || "Yoxdur"}
+              Difficulty: {task.difficulty || "Not specified"}
               <br />
               <span>
                 Status: {task.completed ? "Completed" : "Incomplete"}
