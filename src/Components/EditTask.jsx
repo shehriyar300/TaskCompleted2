@@ -92,10 +92,10 @@ export default function EditTask() {
               required
             >
               <option value="all">All</option>
-          <option value="Yüngül">Easy</option>
-          <option value="Orta">Medium</option>
-          <option value="Biraz çətin">Hard</option>
-          <option value="Çətin">Very hard</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+          <option value="Very hard">Very hard</option>
             </select>
 
             <label>Status:</label>
